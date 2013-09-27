@@ -1,0 +1,3 @@
+#!/bin/bash
+echo 'lista e informacion de usuarios'
+cat /etc/passwd | grep '/bin/bash' | sort

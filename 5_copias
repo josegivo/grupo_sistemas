@@ -1,0 +1,2 @@
+#!/bin/bash
+tar -czf copia_usuario.tar.gz $HOME
