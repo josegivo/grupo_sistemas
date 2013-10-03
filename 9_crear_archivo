@@ -1,8 +1,0 @@
-#!/bin/bash
-echo "ingrese el nombre para el fichero"
-read A
-echo "ingrese el tamaño en mb del fichero"
-read B
-C=`expr $B \* 1024`
-dd if=/dev/zero of=$A bs=1024 count=$C
-

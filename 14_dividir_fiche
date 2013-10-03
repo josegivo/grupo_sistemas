@@ -1,6 +1,0 @@
-#!/bin/bash
-echo "Digite el nombre del archivo: "
-read A
-echo "Digite el tamaño de cada parte: "
-read B
-split $A -b "$B"MB -d $A

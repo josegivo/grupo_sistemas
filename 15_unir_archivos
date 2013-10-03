@@ -1,8 +1,0 @@
-#!/bin/bash
-echo "Digite el nombre del archivo a unir : "
-read A
-echo "Ingrese el nombre del archivo final"
-read B
-cat "$A"* > $B
-
-

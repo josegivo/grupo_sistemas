@@ -1,6 +1,0 @@
-#! /bin/bash
-U="$(whoami)"
-echo 'informacion del usuario'
-echo "usuario: $U"
-cat /etc/passwd | grep $U
-

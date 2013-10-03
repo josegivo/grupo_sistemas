@@ -1,6 +1,0 @@
-#!/bin/bash
-echo -n "ingrese el nombre del archivo o directorio "
-read A
-B=`file $A`
-echo "$B"
-
