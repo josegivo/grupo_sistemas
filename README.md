@@ -1,4 +1,5 @@
-grupo_sistemas
+Grupo Sistemas Operativos
 ==============
 
-arkitectura
+Jose Luis Rogriguez
+Jonathan Sanchez Mfc Pte
