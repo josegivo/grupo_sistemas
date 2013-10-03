@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Digite un numero:"
+read A
+let B=$A%2
+if [ $B == 0 ]; then
+	echo "numero par"
+else
+	echo "numero impar"
+fi
+

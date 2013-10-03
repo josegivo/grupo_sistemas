@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Ingrese el tiempo a apagar el sistema en minutos"
+read A
+shutdown -h +$A
+
