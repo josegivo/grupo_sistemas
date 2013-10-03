@@ -1,0 +1,4 @@
+#! /bin/bash
+
+sudo find /var/log/ -mtime 1
+sudo find /var/log/ -mtime 2
