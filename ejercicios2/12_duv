@@ -1,0 +1,22 @@
+#!/bin/bash
+A=$(du -a)
+peso=$(du | cut -d "	" -f 1)
+cont=1
+for i in $A
+do
+	let B=$cont%2
+	if [ $B != 0 ]; then
+		p_arc=$(($i * 100 / $peso))
+		cont_aux=0
+		echo -n '('
+		while [ $cont_aux -le $p_arc ]; do
+			echo -n "#"
+			cont_aux=$(( $cont_aux + 1 ))
+		done
+		echo -n ')'
+		echo -n "$cont_aux% "
+	else
+		echo $i | cut -d "/" -f 2
+	fi
+	cont=$(( $cont + 1 ))
+done
