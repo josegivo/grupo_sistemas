@@ -1,3 +1,0 @@
-#!/bin/bash
-read A
-top | grep $A | cut -d " " -f 2
