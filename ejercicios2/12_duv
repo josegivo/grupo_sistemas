@@ -1,22 +1,23 @@
 #!/bin/bash
-A=$(du -a)
-peso=$(du | cut -d "	" -f 1)
-cont=1
-for i in $A
-do
-	let B=$cont%2
-	if [ $B != 0 ]; then
-		p_arc=$(($i * 100 / $peso))
-		cont_aux=0
-		echo -n '('
-		while [ $cont_aux -le $p_arc ]; do
-			echo -n "#"
-			cont_aux=$(( $cont_aux + 1 ))
-		done
-		echo -n ')'
-		echo -n "$cont_aux% "
-	else
-		echo $i | cut -d "/" -f 2
-	fi
-	cont=$(( $cont + 1 ))
-done
+if [ -d $1 ]; then
+	peso=$(du $1 2> /dev/null | awk {'print $1'})
+	lista=$(du -a $1 2> /dev/null)
+	aya=0
+	for lst_aux in $lista
+	do
+		if [ $aya == 0 ]; then
+			p_arc=$(($lst_aux * 100 / $peso))
+			cont=0
+			echo -n '('
+                	while [ $cont -le $p_arc ]; do
+                        	echo -n "#"
+                        	cont=$(( $cont + 1 ))
+                	done
+                	echo -n ')'$p_arc%
+			aya=1
+		else
+			echo -e "\t"$lst_aux
+			aya=0
+		fi
+	done
+fi
