@@ -1,9 +1,0 @@
-#!/bin/bash
-if [ $1 ]; then
-	aya=$(ps -A | grep $1 2> /dev/null | awk {'print $1'})
-	for saya in $aya
-	do
-		echo "id proceso "$saya
-	done
-fi
-
